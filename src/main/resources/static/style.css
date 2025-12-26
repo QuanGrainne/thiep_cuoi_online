@@ -1,0 +1,976 @@
+body {
+  margin: 0;
+  font-family: "Times New Roman", serif;
+  background: #fff;
+  text-align: center;
+}
+
+.cover {
+  background: #7a1b1b;
+  color: white;
+  padding: 20px;
+}
+
+.save-date {
+  letter-spacing: 3px;
+}
+
+.cover-img img {
+  width: 90%;
+  border-radius: 200px 200px 0 0;
+}
+
+.event-info {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.title h1 {
+  margin: 30px 0;
+  letter-spacing: 6px;
+}
+
+.family {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.family-box {
+  width: 45%;
+}
+
+.divider {
+  width: 1px;
+  background: #7a1b1b;
+  margin: 0 15px;
+}
+
+.invitation {
+  padding: 30px 20px;
+}
+
+.gallery img {
+  width: 30%;
+  margin: 5px;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.date {
+  font-weight: bold;
+  color: #7a1b1b;
+}
+
+button {
+  background: #7a1b1b;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  margin-top: 15px;
+}
+
+.party {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.party-box {
+  width: 45%;
+  border: 1px solid #7a1b1b;
+  padding: 15px;
+}
+
+.story {
+  display: flex;
+  padding: 30px;
+}
+
+.story img {
+  width: 45%;
+}
+
+.story-right {
+  width: 55%;
+  background: #7a1b1b;
+  color: white;
+  padding: 20px;
+}
+
+/* Container chính cho phần lịch */
+.calendar-section {
+    padding-bottom: 40px;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+/* Thanh tiêu đề "Tháng 1" màu đỏ đô tràn lề */
+.section-title-bar {
+    background-color: #7a1b1b;
+    color: white;
+    padding: 12px 20px;
+    font-size: 26px;
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Bao quanh bảng lịch để giới hạn chiều rộng và căn giữa */
+.calendar-wrapper {
+    position: relative;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 0 15px;
+    z-index: 1;
+}
+
+/* Hiển thị ngày 04 / 01 lớn ở trên bảng */
+.calendar-date-display {
+    font-size: 42px;
+    color: #7a1b1b;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+/* Cấu trúc bảng lịch */
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-table th {
+    color: #7a1b1b;
+    font-weight: 600;
+    font-size: 15px;
+    padding-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.calendar-table td {
+    padding: 12px 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Vòng tròn màu đỏ bao quanh ngày cưới (số 4) */
+.dot-active {
+    background-color: #7a1b1b;
+    color: white !important;
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Số 2026 mờ nằm ẩn dưới bảng lịch */
+.calendar-year-watermark {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 110px;
+    font-weight: 800;
+    color: rgba(122, 27, 27, 0.06); /* Màu đỏ đô rất nhạt */
+    z-index: -1; /* Đẩy xuống dưới số ngày */
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -5px;
+}
+
+/* Layout Story So Le */
+.story-layout {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.story-left {
+    width: 55%;
+    padding: 20px 0 20px 10px;
+}
+
+.photo-large {
+    position: relative;
+    height: 100%;
+}
+
+.photo-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.quote-left {
+    padding: 20px 10px;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Cột đỏ bên phải */
+.story-right-col {
+    width: 45%;
+    padding: 20px 10px 0 0;
+}
+
+.red-sidebar {
+    background-color: #7a1b1b;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    color: white;
+    text-align: center;
+}
+
+.photo-small-top, .photo-small-bottom {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.photo-small-top img, .photo-small-bottom img {
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.eng-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    margin: 10px 0 20px 0;
+}
+
+.photo-small-bottom {
+    position: relative;
+}
+
+/* Chữ "With You" đè lên ảnh */
+.with-you-text {
+    position: absolute;
+    bottom: -10px;
+    right: -5px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.vn-quote {
+    margin-top: 30px;
+    position: relative;
+}
+
+.vn-quote p {
+    font-size: 13px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.flower-icon {
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+/* Responsive cho Mobile */
+@media (max-width: 768px) {
+    .with-you-text {
+        font-size: 24px;
+    }
+    .vn-quote p {
+        font-size: 11px;
+    }
+}
+
+/* SECTION QUOTES & ALBUM */
+.quotes-album-section {
+    background-color: #fff;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Khối đỏ phía trên */
+.header-quote-box {
+    background-color: #7a1b1b;
+    padding: 40px 20px 80px 20px;
+    text-align: center;
+}
+
+.script-font-white {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* Album Photos */
+.album-container {
+    margin-top: -50px; /* Đẩy ảnh lên đè khối đỏ */
+    position: relative;
+    padding: 0 15px;
+    z-index: 2;
+}
+
+.photo-pair {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.album-photo {
+    width: 48%;
+    background: white;
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.album-photo img {
+    width: 100%;
+    display: block;
+}
+
+/* Line uốn lượn trang trí */
+.curvy-line-left {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Bottom Text Area */
+.bottom-quote-box {
+    margin-top: 40px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.with-you-title {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 5px;
+    color: #7a1b1b;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.quote-wrapper {
+    position: relative;
+    padding: 20px 0;
+}
+
+.en-sub-quote {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.decorative-line {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    z-index: -1;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .script-font-white {
+        font-size: 20px;
+    }
+    .en-sub-quote {
+        font-size: 12px;
+    }
+}
+
+/* HERO WEDDING SECTION */
+.wedding-hero {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    border: 1px solid #7a1b1b;
+}
+
+/* Ảnh chính */
+.hero-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Countdown bên phải */
+.countdown-box {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: #7a1b1b;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Mỗi ô thời gian */
+.count-item {
+    padding: 10px 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.count-item:last-child {
+    border-bottom: none;
+}
+
+.count-item span {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.count-item small {
+    font-size: 11px;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .wedding-hero {
+        max-width: 100%;
+    }
+
+    .countdown-box {
+        right: 5px;
+    }
+
+    .count-item span {
+        font-size: 18px;
+    }
+}
+
+/* RSVP SECTION */
+.rsvp-section {
+    padding: 40px 15px;
+    background: #fff;
+}
+
+.rsvp-card {
+    max-width: 360px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.rsvp-card h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.rsvp-card label {
+    font-size: 13px;
+    margin-top: 15px;
+    display: block;
+    color: #333;
+}
+
+.rsvp-card input[type="text"],
+.rsvp-card select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.question {
+    margin: 18px 0 10px;
+    font-size: 13px;
+    color: #333;
+}
+
+/* Radio custom */
+.radio-option {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.radio-option input {
+    display: none;
+}
+
+.custom-radio {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ff5b75;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+
+.radio-option input:checked + .custom-radio::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #ff5b75;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+/* Button */
+.btn-confirm {
+    width: 100%;
+    background: #ff5b75;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+/* GIFT SECTION */
+.gift-section {
+  margin-top: 2px;
+    background: #6b1414;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.gift-section h2 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.gift-box img {
+    width: 120px;
+    margin-bottom: 25px;
+}
+
+.gift-text {
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+
+/* WEDDING FAMILY */
+.wedding-family {
+    padding: 60px 20px 40px;
+    background: #fff;
+    text-align: center;
+}
+
+/* Title WEDDING */
+.wedding-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    letter-spacing: 8px;
+    color: #6b1414;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.wedding-flower {
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 6px;
+    position: relative;
+    top: -10px;
+}
+
+/* Family Layout */
+.family-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Card */
+.family-card {
+    width: 40%;
+    padding: 10px 15px;
+}
+
+.family-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+.family-card p {
+    font-size: 14px;
+    margin: 4px 0;
+    color: #222;
+}
+
+.family-card small {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Divider */
+.family-divider {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.family-divider::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 120px;
+    background: #6b1414;
+}
+
+.double-happiness {
+    font-size: 26px;
+    color: #6b1414;
+    background: white;
+    padding: 5px;
+    z-index: 2;
+}
+
+/* Names */
+.family-name {
+    margin-top: 16px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    color: #6b1414;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .family-wrapper {
+        flex-direction: column;
+    }
+
+    .family-card {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .family-divider {
+        display: none;
+    }
+
+    .wedding-title {
+        font-size: 34px;
+    }
+}
+
+
+/* INVITATION SECTION – THƯ MỜI */
+.invitation {
+    padding: 50px 20px 60px;
+    background: #fff;
+    text-align: center;
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+/* Tiêu đề Thư Mời */
+.invite-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: #6b1414;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.invite-text::before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #6b1414;
+    margin: 0 auto 10px;
+}
+
+.invitation > p:nth-of-type(2) {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Gallery ảnh */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.gallery img {
+    width: 28%;
+    border: 3px solid white;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+
+.gallery img:nth-child(2) {
+    transform: scale(1.05);
+}
+
+/* Thời gian */
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.time span {
+    font-size: 16px;
+    color: #000;
+}
+
+.time .date {
+    font-size: 20px;
+    color: #6b1414;
+    font-weight: 600;
+}
+
+/* Địa điểm */
+.location {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Nút chỉ đường */
+.invitation button {
+    background: #6b1414;
+    color: white;
+    border: none;
+    padding: 10px 26px;
+    font-size: 14px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+/* Phần kính mời */
+.invitation p:nth-of-type(4) {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.invitation p:nth-of-type(5) {
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.invitation p:nth-of-type(6) {
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .gallery img {
+        width: 30%;
+    }
+
+    .invite-text {
+        font-size: 26px;
+    }
+
+    .time {
+        gap: 12px;
+    }
+}
+/* PARTY SECTION */
+.party-section {
+    padding: 40px 15px;
+    background: #fff;
+}
+
+.party-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Card */
+.party-card {
+    width: 45%;
+    text-align: center;
+}
+
+/* Divider giữa */
+.party-divider {
+    width: 2px;
+    background: #7a1b1b;
+    margin: 0 20px;
+}
+
+/* Title bo tròn */
+.party-title {
+    display: inline-block;
+    background: #7a1b1b;
+    color: white;
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+/* Content */
+.party-content p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #111;
+}
+
+/* Button */
+.direction-btn {
+    margin-top: 15px;
+    background: #7a1b1b;
+    color: white;
+    border: none;
+    padding: 8px 22px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.direction-btn:hover {
+    opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .party-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .party-divider {
+        width: 60%;
+        height: 1px;
+        margin: 25px 0;
+    }
+
+    .party-card {
+        width: 100%;
+    }
+}
+
+/* Gift Button */
+.gift-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.gift-btn img {
+    width: 120px;
+    transition: transform 0.3s ease;
+}
+
+.gift-btn:hover img {
+    transform: scale(1.05);
+}
+
+.gift-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.gift-modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 18px;
+    padding: 30px;
+    text-align: center;
+}
+
+.gift-cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.gift-card {
+    flex: 1;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.qr-box {
+    height: 200px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.gift-card.pink { color: #ff4f9a; }
+.gift-card.purple { color: #8a5cff; }
+
+.close-btn {
+    margin-top: 25px;
+    padding: 8px 28px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}

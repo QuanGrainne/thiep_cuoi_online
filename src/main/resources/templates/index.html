@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đinh Nhật Quân | Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- COVER -->
+<section class="cover">
+    <p class="save-date">SAVE THE DATE</p>
+
+    <div class="cover-img">
+        <img th:src="@{/images/NPT05840 (1).jpg}" alt="Wedding">
+    </div>
+
+    <div class="event-info">
+        <p>THƯ MỜI TIỆC CƯỚI</p>
+        <strong>CHỦ NHẬT · 11:00</strong>
+        <p>04 · 01 · 2026</p>
+        <hr>
+        <p>LỄ THÀNH HÔN</p>
+        <strong>CHỦ NHẬT · 14:00</strong>
+        <p>04 · 01 · 2026</p>
+    </div>
+</section>
+
+<!-- WEDDING FAMILY SECTION -->
+<section class="wedding-family">
+    <h1 class="wedding-title">
+        WEDDING
+        <span class="wedding-flower">❦</span>
+    </h1>
+
+    <div class="family-wrapper">
+        <!-- NHÀ TRAI -->
+        <div class="family-card">
+            <h3>Nhà Trai</h3>
+            <p>Ông : Đinh Văn Giang</p>
+            <p>Bà : Đinh Thị Thủy</p>
+            <small>Thôn 12, Xuân Trường, Ninh Bình</small>
+            <div class="family-name groom">Văn Minh</div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="family-divider">
+            <span class="double-happiness">囍</span>
+        </div>
+
+        <!-- NHÀ GÁI -->
+        <div class="family-card">
+            <h3>Nhà Gái</h3>
+            <p>Ông : Trịnh Văn Sơn</p>
+            <p>Bà : Lương Thị Lý</p>
+            <small>Thôn 1, Xuân Trường, Ninh Bình</small>
+            <div class="family-name bride">Hà Chang</div>
+        </div>
+    </div>
+</section>
+
+<!-- INVITATION -->
+<section class="invitation">
+    <p class="invite-text">Thư Mời</p>
+    <p>Tham dự Lễ Thành Hôn của chúng mình</p>
+
+    <div class="gallery">
+        <img th:src="@{/images/AMR07658.jpg}">
+        <img th:src="@{/images/AMR07539.jpg}">
+        <img th:src="@{/images/AMR07515.jpg}">
+    </div>
+
+    <div class="time">
+        <span>12:00</span>
+        <span class="date">04 · 01 · 2026</span>
+        <span>Chủ Nhật</span>
+    </div>
+    <p>Tức ngày 16 tháng 11 năm Ất Tỵ</p>
+    <p>Tại</p>
+    <p class="location">
+        Tư Gia Nhà Trai<br>
+        Thôn 12, Xuân Trường, Ninh Bình
+    </p>
+    <p>Trân trọng kính mời</p>
+    <p>...................</p>
+    <p>Đến dự bữa cơm thân mật mừng lễ đính hôn của 2 con chúng tôi</p>
+    <button>Chỉ đường</button>
+</section>
+
+<!-- PARTY -->
+<section class="party-section">
+    <div class="party-container">
+
+        <!-- Nhà Trai -->
+        <div class="party-card left">
+            <div class="party-title">Tiệc Mời Cưới Nhà Trai</div>
+
+            <div class="party-content">
+                <p><strong>10:30 - Chủ Nhật</strong></p>
+                <p>04 . 01 . 2026</p>
+                <p>16/11 âm lịch</p>
+                <p>Tại tư Gia Nhà Trai</p>
+
+                <button class="direction-btn">Chỉ đường</button>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="party-divider"></div>
+
+        <!-- Nhà Gái -->
+        <div class="party-card right">
+            <div class="party-title">Tiệc Mời Cưới Nhà Gái</div>
+
+            <div class="party-content">
+                <p><strong>10:30 - Chủ Nhật</strong></p>
+                <p>04 . 01 . 2026</p>
+                <p>16/11 âm lịch</p>
+                <p>Nhà hàng Đại Dương</p>
+
+                <button class="direction-btn">Chỉ đường</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="calendar-section">
+    <div class="section-title-bar">Tháng 1</div>
+    <div class="calendar-wrapper">
+        <div class="calendar-date-display">04 / 01</div>
+        <table class="calendar-table">
+            <thead>
+                <tr>
+                    <th>Hai</th><th>Ba</th><th>Tư</th><th>Năm</th><th>Sáu</th><th>Bảy</th><th>CN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td><td></td><td></td><td>1</td><td>2</td><td>3</td>
+                    <td><span class="dot-active">4</span></td>
+                </tr>
+                <tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+                <tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+                <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+                <tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td></tr>
+            </tbody>
+        </table>
+        <div class="calendar-year-watermark">2026</div>
+    </div>
+</section>
+
+<section class="story-layout">
+    <div class="story-left">
+        <div class="photo-large">
+            <img th:src="@{/images/AMR07635.JPG}" alt="Bride">
+            <div class="quote-left">
+                <p>If I know what love is,<br>it is because of you.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="story-right-col">
+        <div class="red-sidebar">
+            <div class="photo-small-top">
+                <img th:src="@{/images/AMR08021.JPG}" alt="Couple 1">
+            </div>
+            
+            <p class="eng-quote">I love you all I can</p>
+
+            <div class="photo-small-bottom">
+                <img th:src="@{/images/AMR07846.JPG}" alt="Couple 2">
+                <span class="with-you-text">With You</span>
+            </div>
+
+            <div class="vn-quote">
+                <img src="https://img.icons8.com/ios/50/ffffff/flower-doodle.png" class="flower-icon" width="30">
+                <p>Khoảnh khắc gặp được em, anh đã quyết định sẽ cùng em đi đến hết cuộc đời.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quotes-album-section">
+    <div class="header-quote-box">
+        <h2 class="script-font-white">Hôn nhân là chuyện cả đời</h2>
+        <h2 class="script-font-white">Yêu người vừa ý, Cưới người mình thương</h2>
+    </div>
+
+    <div class="album-container">
+        <div class="curvy-line-left">
+            <svg viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,20 Q50,100 0,180" stroke="#7a1b1b" stroke-width="0.5" fill="none" opacity="0.4"/>
+            </svg>
+        </div>
+
+        <div class="photo-pair">
+            <div class="album-photo">
+                <img th:src="@{/images/AMR08095.JPG}" alt="Couple 1">
+            </div>
+            <div class="album-photo">
+                <img th:src="@{/images/AMR08123.JPG}" alt="Couple 2">
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-quote-box">
+        <h3 class="with-you-title">WITH YOU</h3>
+        
+        <div class="quote-wrapper">
+            <div class="decorative-line">
+                <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10,90 Q100,0 190,90" stroke="#7a1b1b" stroke-width="0.3" fill="none" opacity="0.3"/>
+                </svg>
+            </div>
+            
+            <p class="en-sub-quote">Every moment of each day,</p>
+            <p class="en-sub-quote">loving and missing you</p>
+            <p class="en-sub-quote">dominates every inch of my brain.</p>
+        </div>
+    </div>
+</section>
+
+<!-- HERO WEDDING PHOTO -->
+<section class="wedding-hero">
+    <div class="hero-image">
+        <img th:src="@{/images/AMR07976.jpg}" alt="Wedding Photo">
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="countdown-box">
+        <div class="count-item">
+            <span id="days">00</span>
+            <small>Ngày</small>
+        </div>
+        <div class="count-item">
+            <span id="hours">00</span>
+            <small>Giờ</small>
+        </div>
+        <div class="count-item">
+            <span id="minutes">00</span>
+            <small>Phút</small>
+        </div>
+        <div class="count-item">
+            <span id="seconds">00</span>
+            <small>Giây</small>
+        </div>
+    </div>
+</section>
+
+
+    <!-- GIFT SECTION -->
+<section class="gift-section">
+    <h2>HỘP QUÀ YÊU THƯƠNG</h2>
+
+    <!-- BUTTON thay cho IMG -->
+    <button class="gift-btn" id="openGift">
+        <img th:src="@{/images/gift-box.png}" alt="Gift">
+    </button>
+
+    <p class="gift-text">
+        Cảm ơn bạn đã đồng hành và chúc phúc cho<br>
+        hành trình yêu thương của chúng mình.<br>
+        Niềm vui hôm nay trọn vẹn hơn khi có bạn<br>
+        cùng sẻ chia! 💐
+    </p>
+</section>
+
+<!-- GIFT MODAL -->
+<div class="gift-modal" id="giftModal">
+    <div class="gift-modal-content">
+
+        <h3>Hộp Quà Yêu Thương</h3>
+        <p class="modal-sub">
+            Quét QR code để gửi yêu thương trực tiếp tới:
+        </p>
+
+        <div class="gift-cards">
+
+            <!-- Chú rể & cô dâu -->
+            <div class="gift-card pink">
+                <h4>Chú rể và cô dâu</h4>
+
+                <div class="qr-box">QR Code</div>
+
+                <p class="name">Chú rể và cô dâu</p>
+                <p class="bank">BIDV</p>
+                <p class="account" id="acc1">22010004533325</p>
+
+                <button onclick="copyText('acc1')">Sao chép số TK</button>
+            </div>
+
+            <!-- Bố mẹ -->
+            <div class="gift-card purple">
+                <h4>Bố mẹ</h4>
+
+                <div class="qr-box">QR Code</div>
+
+                <p class="name">Bố mẹ</p>
+                <p class="bank">VIETINBANK</p>
+                <p class="account" id="acc2">0986170504</p>
+
+                <button onclick="copyText('acc2')">Sao chép số TK</button>
+            </div>
+
+        </div>
+
+        <button class="close-btn" id="closeGift">Đóng</button>
+    </div>
+</div>
+
+    
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/script.js}"></script>
+
+</body>
+
+</html>
