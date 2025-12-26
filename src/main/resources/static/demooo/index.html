@@ -297,25 +297,31 @@
             <div class="gift-card pink">
                         <h4>Chú rể và cô dâu</h4>
                 
-                        <div class="qr-box"><img src="/images/qr_code.jpg" alt="QR Code Chú rể & Cô dâu"></div>
+                        <div class="qr-box">
+                            <div class="qr-scan-line"></div>
+                            <img src="/images/qr_code.jpg" alt="QR Code Chú rể & Cô dâu">
+                        </div>
                 <p class="name">Chú rể và cô dâu</p>
                 <p class="bank">BIDV</p>
                 <p class="account" id="acc1">22010004533325</p>
 
-                <button onclick="copyText('acc1')">Sao chép số TK</button>
+                <button onclick="copyText('acc1', this)">Sao chép số TK</button>
             </div>
 
             <!-- Bố mẹ -->
             <div class="gift-card purple">
                 <h4>Bố mẹ</h4>
 
-                <div class="qr-box"><img src="/images/qr_code.jpg" alt="QR Code Bố mẹ"></div>
+                <div class="qr-box">
+                    <div class="qr-scan-line"></div>
+                    <img src="/images/qr_code.jpg" alt="QR Code Bố mẹ">
+                </div>
 
                 <p class="name">Bố mẹ</p>
                 <p class="bank">VIETINBANK</p>
                 <p class="account" id="acc2">0986170504</p>
 
-                <button onclick="copyText('acc2')">Sao chép số TK</button>
+                <button onclick="copyText('acc2', this)">Sao chép số TK</button>
             </div>
 
         </div>

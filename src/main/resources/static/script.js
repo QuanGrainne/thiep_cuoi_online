@@ -44,8 +44,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function copyText(id) {
+function copyText(id, btnElement) {
     const text = document.getElementById(id).innerText;
-    navigator.clipboard.writeText(text);
-    alert("Đã sao chép số tài khoản!");
+    navigator.clipboard.writeText(text).then(() => {
+        // Visual Feedback
+        const originalText = btnElement.innerText;
+        btnElement.innerText = "Đã sao chép! ✔";
+        btnElement.classList.add("btn-copied");
+
+        // Revert after 2 seconds
+        setTimeout(() => {
+            btnElement.innerText = originalText;
+            btnElement.classList.remove("btn-copied");
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
 }

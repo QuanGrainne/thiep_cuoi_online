@@ -904,7 +904,7 @@ button {
     }
 }
 
-/* Gift Button */
+/* Gift Button - Heartbeat Animation */
 .gift-btn {
     background: none;
     border: none;
@@ -916,10 +916,15 @@ button {
 .gift-btn img {
     width: 120px;
     filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+    animation: heartbeat 2.5s infinite ease-in-out;
 }
 
-.gift-btn:hover {
-    transform: scale(1.1);
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.1); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.1); }
+    70% { transform: scale(1); }
 }
 
 /* Modal Overlay */
@@ -1014,6 +1019,34 @@ button {
     margin-bottom: 20px;
     border: 2px dashed #e0e0e0;
     overflow: hidden;
+    position: relative; /* Added for scanner line */
+}
+
+/* QR Scanner Line */
+.qr-scan-line {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: rgba(220, 53, 69, 0.6);
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.8);
+    top: 0;
+    left: 0;
+    animation: scan 2.5s infinite linear;
+    z-index: 10;
+}
+
+@keyframes scan {
+    0% { top: 0; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+/* Copied State for Button */
+.gift-card button.btn-copied {
+    background-color: #198754 !important;
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.3) !important;
+    transform: scale(0.98);
 }
 
 .qr-box img {
